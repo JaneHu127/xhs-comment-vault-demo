@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="小红书评论研究库交互演示：收藏有价值的评论，并通过标签、搜索和 AI 总结把零散经验整理成可复用的信息。">
+  <meta name="theme-color" content="#f4f0f1">
+  <meta property="og:title" content="小红书评论研究库 · 产品演示">
+  <meta property="og:description" content="从一条有价值的评论，到可检索、可整理、可总结的个人研究资料。">
+  <title>小红书评论研究库 · 产品演示</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#demo">跳到产品演示</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回页面顶部">
+      <span class="brand-mark" aria-hidden="true">评</span>
+      <span>小红书评论研究库</span>
+    </a>
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="#why">产品背景</a>
+      <a class="nav-primary" href="#demo">体验 Demo</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="section-kicker">个人信息整理工具 · Web Demo</p>
+        <h1 id="hero-title">把真正有用的评论，<br><span>从收藏夹里捞出来。</span></h1>
+        <p class="hero-description">收藏整篇笔记，往往只是为了其中一两条评论。这个工具让用户定点收藏评论，再通过标签、搜索和 AI 总结，把零散经验变成随时能用的个人研究资料。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#demo">开始体验</a>
+          <a class="button button-text" href="#why">了解设计思路 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="产品工作流程">
+        <div class="proof-heading">
+          <span>产品路径</span>
+          <span class="live-dot">交互演示</span>
+        </div>
+        <ol class="workflow">
+          <li><span class="step-number">01</span><div><strong>定点收藏</strong><p>只保存真正有价值的评论及其回复背景</p></div></li>
+          <li><span class="step-number">02</span><div><strong>分类整理</strong><p>用标签、搜索和重点标记沉淀个人资料</p></div></li>
+          <li><span class="step-number">03</span><div><strong>AI 归纳</strong><p>围绕一个主题总结共识、分歧与行动建议</p></div></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section id="why" class="why-section" aria-labelledby="why-title">
+      <div>
+        <p class="section-kicker">为什么做</p>
+        <h2 id="why-title">收藏不是终点，<br>再次使用才是。</h2>
+      </div>
+      <div class="why-copy">
+        <p>求职经验、公司评价和旅行避雷等信息，常常只存在于评论区。传统的整篇收藏无法快速标记重点，内容也容易长期躺在收藏夹里。</p>
+        <p>因此产品把操作单位从“整篇笔记”缩小为“一条评论”，再提供本地整理与主题总结，让信息在真正需要时能够被找到。</p>
+      </div>
+      <dl class="project-facts">
+        <div><dt>数据原则</dt><dd>本地优先</dd></div>
+        <div><dt>核心对象</dt><dd>单条评论</dd></div>
+        <div><dt>AI 场景</dt><dd>标签总结</dd></div>
+      </dl>
+    </section>
+
+    <section id="demo" class="demo-section" aria-labelledby="demo-title">
+      <div class="demo-heading">
+        <div>
+          <p class="section-kicker">可操作的产品原型</p>
+          <h2 id="demo-title">我的收藏</h2>
+          <p id="collection-summary" class="collection-summary"></p>
+        </div>
+        <span class="demo-data-note"><span aria-hidden="true">●</span> 当前页面使用模拟数据</span>
+      </div>
+
+      <div class="app-shell">
+        <aside class="tag-sidebar" aria-labelledby="tag-title">
+          <div class="sidebar-heading">
+            <p>收藏分类</p>
+            <h3 id="tag-title">标签</h3>
+          </div>
+          <nav id="tag-list" class="tag-list" aria-label="按标签筛选"></nav>
+        </aside>
+
+        <div class="app-main">
+          <section class="search-panel" aria-label="搜索收藏">
+            <label for="search-input">搜索评论、作者、笔记</label>
+            <div class="search-row">
+              <input id="search-input" type="search" placeholder="例如：项目经理、错峰、避雷" autocomplete="off">
+              <button id="search-button" class="button button-primary" type="button">搜索</button>
+            </div>
+          </section>
+
+          <section id="ai-panel" class="ai-panel" aria-labelledby="ai-title">
+            <div class="ai-panel-top">
+              <div>
+                <p class="ai-label">AI 标签分析</p>
+                <h3 id="ai-title">整理当前分类的共同信息</h3>
+              </div>
+              <button id="ai-generate" class="button button-secondary" type="button">生成标签总结</button>
+            </div>
+            <div id="ai-empty" class="ai-empty">选择一个标签后，AI 会归纳该分类下的共识、分歧和下一步行动。</div>
+            <div id="ai-loading" class="ai-loading" hidden aria-label="正在生成总结">
+              <span></span><span></span><span></span>
+            </div>
+            <div id="ai-result" class="ai-result" hidden>
+              <p id="ai-overview"></p>
+              <ul id="ai-findings"></ul>
+              <div class="ai-result-footer">
+                <span id="ai-meta"></span>
+                <button id="ai-chat-open" class="text-action" type="button">继续追问 <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </section>
+
+          <p id="filter-message" class="filter-message" hidden></p>
+          <section id="entries" class="entries" aria-live="polite"></section>
+          <div id="empty-state" class="empty-state" hidden>
+            <span aria-hidden="true">⌕</span>
+            <h3>没有找到相关收藏</h3>
+            <p>换一个关键词，或者返回“全部收藏”看看。</p>
+            <button id="clear-filters" class="button button-secondary" type="button">清除筛选</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>小红书评论研究库 · 个人产品项目</p>
+    <p>本页仅用于功能演示，所有昵称、评论和笔记均为模拟内容。</p>
+  </footer>
+
+  <dialog id="editor-dialog" class="editor-dialog">
+    <form id="editor-form" method="dialog">
+      <header class="dialog-heading">
+        <div><p class="section-kicker">收藏内容</p><h2>编辑收藏</h2></div>
+        <button id="editor-close" class="icon-button" type="button" aria-label="关闭编辑器">×</button>
+      </header>
+      <div class="editor-field">
+        <span class="field-label">内容</span>
+        <div class="editor-toolbar" role="toolbar" aria-label="文字格式">
+          <button type="button" data-command="bold" aria-label="加粗"><strong>加粗</strong></button>
+          <button type="button" data-command="underline" aria-label="下划线"><u>下划线</u></button>
+          <span>高亮</span>
+          <button class="highlight-button yellow" type="button" data-color="#fff09b" aria-label="黄色高亮"></button>
+          <button class="highlight-button green" type="button" data-color="#c7efd3" aria-label="绿色高亮"></button>
+          <button class="highlight-button blue" type="button" data-color="#c8e6f6" aria-label="蓝色高亮"></button>
+          <button type="button" data-command="removeFormat">清除格式</button>
+        </div>
+        <div id="rich-editor" class="rich-editor" contenteditable="true" role="textbox" aria-multiline="true"></div>
+      </div>
+      <fieldset class="tag-fieldset">
+        <legend>标签</legend>
+        <div id="editor-tags" class="editor-tags"></div>
+      </fieldset>
+      <div class="dialog-actions">
+        <button id="editor-cancel" class="button button-secondary" type="button">取消</button>
+        <button class="button button-primary" type="submit">保存修改</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="chat-backdrop" class="chat-backdrop" hidden></div>
+  <aside id="chat-drawer" class="chat-drawer" aria-labelledby="chat-title" hidden>
+    <header class="chat-header">
+      <div><p class="section-kicker">AI 研究助手</p><h2 id="chat-title">继续追问</h2><p id="chat-scope"></p></div>
+      <button id="chat-close" class="icon-button" type="button" aria-label="关闭对话">×</button>
+    </header>
+    <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+    <div id="chat-suggestions" class="chat-suggestions"></div>
+    <form id="chat-form" class="chat-form">
+      <textarea id="chat-input" rows="2" placeholder="继续追问这个标签下的收藏…" required></textarea>
+      <button class="button button-primary" type="submit">发送</button>
+    </form>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span id="toast-text"></span>
+    <button id="toast-undo" type="button" hidden>撤销</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
