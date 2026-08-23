@@ -20,6 +20,7 @@
     </a>
     <nav class="site-nav" aria-label="页面导航">
       <a href="#why">产品背景</a>
+      <a href="#real-demo">真实演示</a>
       <a class="nav-primary" href="#demo">体验 Demo</a>
     </nav>
   </header>
@@ -32,7 +33,7 @@
         <p class="hero-description">收藏整篇笔记，往往只是为了其中一两条评论。这个工具让用户定点收藏评论，再通过标签、搜索和 AI 总结，把零散经验变成随时能用的个人研究资料。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#demo">开始体验</a>
-          <a class="button button-text" href="#why">了解设计思路 <span aria-hidden="true">↓</span></a>
+          <a class="button button-text" href="#real-demo">观看真实操作 <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <aside class="hero-proof" aria-label="产品工作流程">
@@ -54,7 +55,7 @@
         <h2 id="why-title">收藏不是终点，<br>再次使用才是。</h2>
       </div>
       <div class="why-copy">
-        <p>求职经验、公司评价和旅行避雷等信息，常常只存在于评论区。传统的整篇收藏无法快速标记重点，内容也容易长期躺在收藏夹里。</p>
+        <p>小红书中的许多高价值的真实经验往往只存在于评论区，传统的整篇收藏笔记会覆盖评论区的信息，无法突出用户收藏笔记的目标信息，导致目标信息长期“躺在收藏夹中吃灰”。</p>
         <p>因此产品把操作单位从“整篇笔记”缩小为“一条评论”，再提供本地整理与主题总结，让信息在真正需要时能够被找到。</p>
       </div>
       <dl class="project-facts">
@@ -62,6 +63,36 @@
         <div><dt>核心对象</dt><dd>单条评论</dd></div>
         <div><dt>AI 场景</dt><dd>标签总结</dd></div>
       </dl>
+    </section>
+
+    <section id="real-demo" class="real-demo-section" aria-labelledby="real-demo-title">
+      <div class="real-demo-heading">
+        <div>
+          <p class="section-kicker">真实操作录屏</p>
+          <h2 id="real-demo-title">从评论旁的按钮，<br>到可追问的研究资料。</h2>
+        </div>
+      </div>
+
+      <div class="recording-layout">
+        <div class="recording-player">
+          <div class="recording-bar" aria-hidden="true">
+            <span><i></i><i></i><i></i></span>
+            <strong>小红书评论研究库 · 实际使用</strong>
+            <em>02:11</em>
+          </div>
+          <video controls muted playsinline preload="metadata" poster="xhs-real-use-demo-poster.svg" aria-label="小红书评论研究库真实使用演示视频">
+            <source src="xhs-real-use-demo.mp4" type="video/mp4">
+            当前浏览器无法播放视频，请下载后查看。
+          </video>
+          <p class="recording-caption">进入画面后自动静音播放 · 滑出后自动暂停 · 可用播放器控件开启声音</p>
+        </div>
+
+        <ol class="recording-steps" aria-label="录屏内容">
+          <li><span>01</span><div><strong>定点收藏评论</strong><p>直接在小红书评论旁完成收藏，不必保存整篇笔记。</p></div></li>
+          <li><span>02</span><div><strong>编辑与归类</strong><p>保留评论重点，补充格式并选择对应标签。</p></div></li>
+          <li><span>03</span><div><strong>总结与追问</strong><p>在收藏库中汇总同类信息，并围绕资料继续提问。</p></div></li>
+        </ol>
+      </div>
     </section>
 
     <section id="demo" class="demo-section" aria-labelledby="demo-title">
@@ -87,7 +118,7 @@
           <section class="search-panel" aria-label="搜索收藏">
             <label for="search-input">搜索评论、作者、笔记</label>
             <div class="search-row">
-              <input id="search-input" type="search" placeholder="例如：项目经理、错峰、避雷" autocomplete="off">
+              <input id="search-input" type="search" placeholder="例如：面包、龙之梦、夏校" autocomplete="off">
               <button id="search-button" class="button button-primary" type="button">搜索</button>
             </div>
           </section>
@@ -129,7 +160,7 @@
 
   <footer>
     <p>小红书评论研究库 · 个人产品项目</p>
-    <p>本页仅用于功能演示，所有昵称、评论和笔记均为模拟内容。</p>
+    <p>本页仅用于功能演示，展示内容均已匿名化并经过演示化整理。</p>
   </footer>
 
   <dialog id="editor-dialog" class="editor-dialog">

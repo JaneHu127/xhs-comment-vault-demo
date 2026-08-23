@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1118" viewBox="0 0 1920 1118" role="img" aria-labelledby="title description">
+  <title id="title">小红书评论研究库真实操作演示</title>
+  <desc id="description">展示定点收藏、编辑归类和人工智能总结三个操作阶段的视频封面。</desc>
+  <defs>
+    <radialGradient id="bg" cx="18%" cy="8%" r="105%">
+      <stop offset="0" stop-color="#fff7f8"/>
+      <stop offset="1" stop-color="#eee6e9"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="34" flood-color="#5b3943" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1118" fill="url(#bg)"/>
+  <circle cx="1710" cy="116" r="260" fill="#e93750" opacity=".055"/>
+  <circle cx="196" cy="1000" r="330" fill="#e93750" opacity=".035"/>
+  <g transform="translate(150 156)">
+    <text x="0" y="0" fill="#e93750" font-family="Microsoft YaHei, sans-serif" font-size="26" font-weight="700" letter-spacing="5">真实插件操作演示</text>
+    <text x="0" y="112" fill="#252124" font-family="Microsoft YaHei, sans-serif" font-size="76" font-weight="800">从一条评论开始，</text>
+    <text x="0" y="202" fill="#252124" font-family="Microsoft YaHei, sans-serif" font-size="76" font-weight="800">沉淀成可再次使用的信息。</text>
+  </g>
+  <g transform="translate(150 500)" filter="url(#shadow)">
+    <rect width="1620" height="300" rx="34" fill="#fffdfd"/>
+    <g transform="translate(70 68)">
+      <text x="0" y="0" fill="#e93750" font-family="Arial, sans-serif" font-size="24" font-weight="700">01</text>
+      <text x="0" y="54" fill="#252124" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700">定点收藏</text>
+      <text x="0" y="100" fill="#8d858a" font-family="Microsoft YaHei, sans-serif" font-size="23">只保存真正有用的评论</text>
+    </g>
+    <path d="M470 150h120" stroke="#ddd3d7" stroke-width="4" stroke-linecap="round"/>
+    <path d="m574 136 18 14-18 14" fill="none" stroke="#ddd3d7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(650 68)">
+      <text x="0" y="0" fill="#e93750" font-family="Arial, sans-serif" font-size="24" font-weight="700">02</text>
+      <text x="0" y="54" fill="#252124" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700">编辑归类</text>
+      <text x="0" y="100" fill="#8d858a" font-family="Microsoft YaHei, sans-serif" font-size="23">提炼重点并选择标签</text>
+    </g>
+    <path d="M1050 150h120" stroke="#ddd3d7" stroke-width="4" stroke-linecap="round"/>
+    <path d="m1154 136 18 14-18 14" fill="none" stroke="#ddd3d7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(1230 68)">
+      <text x="0" y="0" fill="#e93750" font-family="Arial, sans-serif" font-size="24" font-weight="700">03</text>
+      <text x="0" y="54" fill="#252124" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700">AI 总结</text>
+      <text x="0" y="100" fill="#8d858a" font-family="Microsoft YaHei, sans-serif" font-size="23">按主题汇总并继续追问</text>
+    </g>
+  </g>
+  <g transform="translate(150 940)">
+    <circle cx="43" cy="0" r="43" fill="#e93750"/>
+    <path d="m31-20 34 20-34 20z" fill="#fff"/>
+    <text x="112" y="10" fill="#5f585d" font-family="Microsoft YaHei, sans-serif" font-size="26">点击播放 · 02:11</text>
+  </g>
+</svg>
